@@ -3,53 +3,53 @@ import Layout from '../layouts/Layout.astro';
 
 const services = [
 	{
-		name: "Plumbing Repairs",
-		description: "From leaky faucets to pipe replacements, we handle all plumbing issues.",
+		name: "Fontanería",
+		description: "Desde grifos que gotean hasta sustitución de tuberías, nos encargamos de todos los problemas de fontanería.",
 		icon: "🚿"
 	},
 	{
-		name: "Electrical Work",
-		description: "Safe and reliable electrical repairs and installations.",
+		name: "Electricidad",
+		description: "Reparaciones e instalaciones eléctricas seguras y fiables.",
 		icon: "⚡"
 	},
 	{
-		name: "Drywall & Patching",
-		description: "Professional drywall installation and damage repair.",
+		name: "Pladur y Reparaciones",
+		description: "Instalación profesional de pladur y reparación de daños.",
 		icon: "🧱"
 	},
 	{
-		name: "Carpentry",
-		description: "Custom woodwork, shelving, and furniture repairs.",
+		name: "Carpintería",
+		description: "Trabajos de madera personalizados, estanterías y reparación de muebles.",
 		icon: "🪵"
 	},
 	{
-		name: "Painting",
-		description: "Interior and exterior painting with professional finish.",
+		name: "Pintura",
+		description: "Pintura interior y exterior con acabado profesional.",
 		icon: "🎨"
 	},
 	{
-		name: "Flooring",
-		description: "Installation and repair of various flooring types.",
+		name: "Suelos",
+		description: "Instalación y reparación de diversos tipos de suelos.",
 		icon: "🏠"
 	},
 	{
-		name: "Door & Window Repair",
-		description: "Fix or replace damaged doors and windows.",
+		name: "Puertas y Ventanas",
+		description: "Reparación o sustitución de puertas y ventanas dañadas.",
 		icon: "🪟"
 	},
 	{
-		name: "General Maintenance",
-		description: "Regular home maintenance and inspection services.",
+		name: "Mantenimiento General",
+		description: "Servicios regulares de mantenimiento e inspección del hogar.",
 		icon: "🔍"
 	}
 ];
 ---
 
-<Layout title="Services">
+<Layout title="Servicios">
 	<section class="services-hero">
 		<div class="container">
-			<h1>Our Services</h1>
-			<p>We offer a comprehensive range of handyman services to keep your home in perfect condition</p>
+			<h1>Nuestros Servicios</h1>
+			<p>Ofrecemos una amplia gama de servicios de mantenimiento para mantener tu hogar en perfectas condiciones</p>
 		</div>
 	</section>
 
@@ -61,7 +61,7 @@ const services = [
 						<div class="service-icon">{service.icon}</div>
 						<h3>{service.name}</h3>
 						<p>{service.description}</p>
-						<a href="/contact" class="service-link">Learn More →</a>
+						<a href="/contact" class="service-link">Saber Más →</a>
 					</div>
 				))}
 			</div>
@@ -70,27 +70,27 @@ const services = [
 
 	<section class="service-process">
 		<div class="container">
-			<h2>Our Process</h2>
+			<h2>Nuestro Proceso</h2>
 			<div class="process-steps">
 				<div class="step">
 					<div class="step-number">1</div>
-					<h3>Contact Us</h3>
-					<p>Describe your project or issue</p>
+					<h3>Contáctanos</h3>
+					<p>Describe tu proyecto o problema</p>
 				</div>
 				<div class="step">
 					<div class="step-number">2</div>
-					<h3>Free Assessment</h3>
-					<p>We evaluate and provide a quote</p>
+					<h3>Evaluación Gratuita</h3>
+					<p>Evaluamos y proporcionamos presupuesto</p>
 				</div>
 				<div class="step">
 					<div class="step-number">3</div>
-					<h3>Schedule Service</h3>
-					<p>Pick a time that works for you</p>
+					<h3>Programa el Servicio</h3>
+					<p>Elige el momento que mejor te convenga</p>
 				</div>
 				<div class="step">
 					<div class="step-number">4</div>
-					<h3>Quality Work</h3>
-					<p>Expert service with attention to detail</p>
+					<h3>Trabajo de Calidad</h3>
+					<p>Servicio experto con atención al detalle</p>
 				</div>
 			</div>
 		</div>
