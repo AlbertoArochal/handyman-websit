@@ -39,6 +39,20 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
+	<section class="gallery">
+		<div class="container">
+			<h2>Nuestros Trabajos</h2>
+			<p class="gallery-subtitle">Descubre algunos de nuestros proyectos realizados</p>
+			<div class="carousel-container">
+				<!-- Espacio reservado para carrusel de fotos -->
+				<div class="carousel-placeholder">
+					<div class="placeholder-icon">📷</div>
+					<p>Próximamente: Galería de proyectos</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="cta">
 		<div class="container">
 			<h2>¿Listo para Arreglarlo?</h2>
@@ -109,6 +123,52 @@ import Layout from '../layouts/Layout.astro';
 
 		.feature-card h3 {
 			color: var(--primary-color);
+		}
+
+		.gallery {
+			background-color: var(--light-bg);
+			padding: 4rem 0;
+		}
+
+		.gallery h2 {
+			text-align: center;
+			margin-bottom: 0.5rem;
+		}
+
+		.gallery-subtitle {
+			text-align: center;
+			color: var(--text-light);
+			margin-bottom: 2.5rem;
+		}
+
+		.carousel-container {
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		.carousel-placeholder {
+			background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+			border-radius: 1rem;
+			padding: 4rem 2rem;
+			text-align: center;
+			border: 3px dashed var(--border-color);
+			min-height: 350px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.placeholder-icon {
+			font-size: 4rem;
+			margin-bottom: 1rem;
+			opacity: 0.6;
+		}
+
+		.carousel-placeholder p {
+			color: var(--text-light);
+			font-size: 1.1rem;
+			font-weight: 500;
 		}
 
 		.cta {
