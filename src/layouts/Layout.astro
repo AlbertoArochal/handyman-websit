@@ -159,8 +159,25 @@ const { title, description = "Servicios profesionales de mantenimiento del hogar
 						<p>Email: info@profix.es</p>
 					</div>
 				</div>
+				<div class="footer-localities">
+					<h4>Reparaciones y Reformas en el Sur de Tenerife</h4>
+					<div class="localities-grid">
+						<a href="/">Reparaciones y reformas Adeje</a>
+						<a href="/">Reparaciones y reformas Arona</a>
+						<a href="/">Reparaciones y reformas Los Cristianos</a>
+						<a href="/">Reparaciones y reformas Playa de las Américas</a>
+						<a href="/">Reparaciones y reformas Costa Adeje</a>
+						<a href="/">Reparaciones y reformas Granadilla de Abona</a>
+						<a href="/">Reparaciones y reformas San Miguel de Abona</a>
+						<a href="/">Reparaciones y reformas El Médano</a>
+						<a href="/">Reparaciones y reformas Las Galletas</a>
+						<a href="/">Reparaciones y reformas Palm-Mar</a>
+						<a href="/">Reparaciones y reformas Guía de Isora</a>
+						<a href="/">Reparaciones y reformas Santiago del Teide</a>
+					</div>
+				</div>
 				<div class="footer-bottom">
-					<p>&copy; 2024 ProFix Handyman Services. Todos los derechos reservados.</p>
+					<p>&copy; 2026 ProFix Handyman Services. Todos los derechos reservados.</p>
 				</div>
 			</div>
 		</footer>
@@ -243,6 +260,35 @@ const { title, description = "Servicios profesionales de mantenimiento del hogar
 				padding-top: 1rem;
 				text-align: center;
 				color: #9ca3af;
+			}
+
+			.footer-localities {
+				margin-top: 2rem;
+				padding-top: 2rem;
+				border-top: 1px solid #374151;
+			}
+
+			.footer-localities h4 {
+				color: var(--secondary-color);
+				margin-bottom: 1.5rem;
+				text-align: center;
+			}
+
+			.localities-grid {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75rem 1.5rem;
+				justify-content: center;
+			}
+
+			.localities-grid a {
+				color: #9ca3af;
+				font-size: 0.875rem;
+				transition: color 0.3s ease;
+			}
+
+			.localities-grid a:hover {
+				color: var(--secondary-color);
 			}
 
 			@media (max-width: 768px) {
