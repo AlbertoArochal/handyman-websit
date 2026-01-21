@@ -173,16 +173,58 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		@media (max-width: 768px) {
+			.about-hero {
+				padding: 3rem 0;
+			}
+
 			.about-hero h1 {
 				font-size: 2rem;
 			}
 
+			.about-hero p {
+				font-size: 1rem;
+				padding: 0 1rem;
+			}
+
+			.about-content {
+				padding: 2.5rem 0;
+			}
+
 			.about-grid {
 				grid-template-columns: 1fr;
+				gap: 2rem;
 			}
 
 			.about-stats {
-				grid-template-columns: 1fr;
+				grid-template-columns: 1fr 1fr;
+				gap: 1rem;
+			}
+
+			.stat {
+				padding: 1.25rem;
+			}
+
+			.stat-number {
+				font-size: 2rem;
+			}
+
+			.team {
+				padding: 2.5rem 0;
+			}
+
+			.team h2 {
+				margin-bottom: 2rem;
+			}
+
+			.team-member.featured {
+				padding: 2rem;
+				max-width: 100%;
+			}
+
+			.member-avatar {
+				width: 80px;
+				height: 80px;
+				font-size: 1.5rem;
 			}
 		}
 	</style>

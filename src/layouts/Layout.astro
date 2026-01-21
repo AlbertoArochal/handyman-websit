@@ -125,6 +125,12 @@ const { title, description = "Servicios profesionales de mantenimiento del hogar
 				<div class="logo">
 					<a href="/">ReyrLesa</a>
 				</div>
+				<input type="checkbox" id="menu-toggle" class="menu-toggle">
+				<label for="menu-toggle" class="menu-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
 				<ul class="nav-links">
 					<li><a href="/">Inicio</a></li>
 					<li><a href="/services">Servicios</a></li>
@@ -218,6 +224,28 @@ const { title, description = "Servicios profesionales de mantenimiento del hogar
 
 			.nav-links a:hover {
 				color: var(--secondary-color);
+			}
+
+			/* Hamburger menu */
+			.menu-toggle {
+				display: none;
+			}
+
+			.menu-icon {
+				display: none;
+				flex-direction: column;
+				cursor: pointer;
+				gap: 5px;
+				padding: 5px;
+			}
+
+			.menu-icon span {
+				display: block;
+				width: 25px;
+				height: 3px;
+				background-color: white;
+				border-radius: 2px;
+				transition: all 0.3s ease;
 			}
 
 			.footer {
@@ -315,9 +343,42 @@ const { title, description = "Servicios profesionales de mantenimiento del hogar
 			}
 
 			@media (max-width: 768px) {
+				.nav-container {
+					flex-wrap: wrap;
+				}
+
+				.menu-icon {
+					display: flex;
+				}
+
 				.nav-links {
-					gap: 1rem;
-					font-size: 0.9rem;
+					display: none;
+					flex-direction: column;
+					width: 100%;
+					text-align: center;
+					padding: 1rem 0;
+					gap: 0;
+				}
+
+				.nav-links li {
+					padding: 0.75rem 0;
+					border-top: 1px solid #374151;
+				}
+
+				.menu-toggle:checked ~ .nav-links {
+					display: flex;
+				}
+
+				.menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+					transform: rotate(45deg) translate(5px, 5px);
+				}
+
+				.menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+					opacity: 0;
+				}
+
+				.menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+					transform: rotate(-45deg) translate(6px, -6px);
 				}
 
 				h1 {
@@ -326,6 +387,14 @@ const { title, description = "Servicios profesionales de mantenimiento del hogar
 
 				h2 {
 					font-size: 1.5rem;
+				}
+
+				.footer-content {
+					text-align: center;
+				}
+
+				.footer-section ul {
+					padding: 0;
 				}
 			}
 		</style>
