@@ -264,7 +264,7 @@ const { title, description = "Servicios profesionales de mantenimiento del hogar
 
 			.footer-localities {
 				margin-top: 2rem;
-				padding-top: 2rem;
+				padding: 2rem 0 2.5rem;
 				border-top: 1px solid #374151;
 			}
 
@@ -283,13 +283,28 @@ const { title, description = "Servicios profesionales de mantenimiento del hogar
 			}
 
 			.localities-grid a {
-				color: #9ca3af;
+				color: #d1d5db;
 				font-size: 0.875rem;
-				transition: color 0.3s ease;
+				font-weight: 600;
+				transition: all 0.3s ease;
+				position: relative;
+				padding-left: 1.25rem;
+			}
+
+			.localities-grid a::before {
+				content: "→";
+				position: absolute;
+				left: 0;
+				color: var(--secondary-color);
+				transition: transform 0.3s ease;
 			}
 
 			.localities-grid a:hover {
 				color: var(--secondary-color);
+			}
+
+			.localities-grid a:hover::before {
+				transform: translateX(3px);
 			}
 
 			@media (max-width: 600px) {
