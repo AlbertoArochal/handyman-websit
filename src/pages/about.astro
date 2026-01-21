@@ -75,7 +75,7 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		.about-content {
-			background-color: white;
+			background-color: var(--card-bg);
 			padding: 4rem 0;
 		}
 
@@ -102,7 +102,7 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		.stat {
-			background-color: var(--light-bg);
+			background-color: var(--card-bg);
 			padding: 2rem;
 			border-radius: 0.75rem;
 			text-align: center;
@@ -136,11 +136,12 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		.team-member {
-			background-color: white;
+			background-color: var(--card-bg);
 			padding: 2rem;
 			border-radius: 0.75rem;
 			text-align: center;
 			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+			border: 2px solid var(--border-color);
 		}
 
 		.team-member.featured {
@@ -225,6 +226,17 @@ import Layout from '../layouts/Layout.astro';
 				width: 80px;
 				height: 80px;
 				font-size: 1.5rem;
+			}
+		}
+
+		/* Modo oscuro móvil */
+		@media (max-width: 768px) and (prefers-color-scheme: dark) {
+			.about-content {
+				background-color: var(--light-bg);
+			}
+
+			.team-member {
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 			}
 		}
 	</style>

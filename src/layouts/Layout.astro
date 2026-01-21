@@ -31,6 +31,41 @@ const { title, description = "Servicios profesionales de mantenimiento del hogar
 				--text-dark: #111827;
 				--text-light: #6b7280;
 				--border-color: #e5e7eb;
+				--card-bg: #ffffff;
+				--input-bg: #ffffff;
+			}
+
+			/* Modo oscuro solo en móvil cuando el usuario tiene preferencia de tema oscuro */
+			@media (max-width: 768px) and (prefers-color-scheme: dark) {
+				:root {
+					--primary-color: #3b82f6;
+					--primary-dark: #2563eb;
+					--secondary-color: #fb923c;
+					--dark-bg: #0f172a;
+					--light-bg: #1e293b;
+					--text-dark: #f1f5f9;
+					--text-light: #94a3b8;
+					--border-color: #334155;
+					--card-bg: #1e293b;
+					--input-bg: #0f172a;
+				}
+
+				html {
+					background-color: var(--dark-bg);
+					color-scheme: dark;
+				}
+
+				h1, h2, h3, h4 {
+					color: var(--text-dark);
+				}
+
+				a {
+					color: var(--primary-color);
+				}
+
+				a:hover {
+					color: var(--secondary-color);
+				}
 			}
 
 			html {

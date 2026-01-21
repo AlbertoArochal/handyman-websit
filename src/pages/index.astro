@@ -87,7 +87,7 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		.features {
-			background-color: white;
+			background-color: var(--card-bg);
 		}
 
 		.features h2 {
@@ -102,12 +102,12 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		.feature-card {
-			background-color: var(--light-bg);
+			background-color: var(--card-bg);
 			padding: 2rem;
 			border-radius: 0.75rem;
 			text-align: center;
 			transition: all 0.3s ease;
-			border: 2px solid transparent;
+			border: 2px solid var(--border-color);
 		}
 
 		.feature-card:hover {
@@ -233,6 +233,28 @@ import Layout from '../layouts/Layout.astro';
 
 			.cta {
 				padding: 3rem 0;
+			}
+		}
+
+		/* Modo oscuro móvil */
+		@media (max-width: 768px) and (prefers-color-scheme: dark) {
+			.feature-card {
+				background-color: var(--card-bg);
+				border-color: var(--border-color);
+			}
+
+			.feature-card:hover {
+				border-color: var(--primary-color);
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+			}
+
+			.carousel-placeholder {
+				background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+				border-color: var(--border-color);
+			}
+
+			.carousel-placeholder p {
+				color: var(--text-light);
 			}
 		}
 	</style>

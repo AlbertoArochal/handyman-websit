@@ -114,7 +114,7 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		.contact-content {
-			background-color: white;
+			background-color: var(--card-bg);
 			padding: 4rem 0;
 		}
 
@@ -151,6 +151,8 @@ import Layout from '../layouts/Layout.astro';
 			font-family: inherit;
 			font-size: 1rem;
 			transition: border-color 0.3s ease;
+			background-color: var(--input-bg);
+			color: var(--text-dark);
 		}
 
 		.form-group input:focus,
@@ -202,11 +204,12 @@ import Layout from '../layouts/Layout.astro';
 			justify-content: center;
 			width: 40px;
 			height: 40px;
-			background-color: var(--light-bg);
+			background-color: var(--input-bg);
 			border-radius: 50%;
 			color: var(--primary-color);
 			font-weight: 700;
 			transition: all 0.3s ease;
+			border: 1px solid var(--border-color);
 		}
 
 		.social-icons a:hover {
@@ -258,6 +261,19 @@ import Layout from '../layouts/Layout.astro';
 			.social-links {
 				margin-top: 1.5rem;
 				padding-top: 1.5rem;
+			}
+		}
+
+		/* Modo oscuro móvil */
+		@media (max-width: 768px) and (prefers-color-scheme: dark) {
+			.form-group input::placeholder,
+			.form-group textarea::placeholder {
+				color: var(--text-light);
+			}
+
+			.form-group select option {
+				background-color: var(--input-bg);
+				color: var(--text-dark);
 			}
 		}
 	</style>
