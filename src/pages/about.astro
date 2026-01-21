@@ -44,31 +44,13 @@ import Layout from '../layouts/Layout.astro';
 
 	<section class="team">
 		<div class="container">
-			<h2>Conoce a Nuestro Equipo</h2>
-			<div class="team-grid">
-				<div class="team-member">
-					<div class="member-avatar">JD</div>
-					<h3>Juan García</h3>
-					<p class="role">Propietario y Técnico Principal</p>
-					<p>15 años de experiencia en reparaciones y renovaciones residenciales.</p>
-				</div>
-				<div class="team-member">
-					<div class="member-avatar">SM</div>
-					<h3>Sara Martínez</h3>
-					<p class="role">Fontanera Experta</p>
-					<p>Especializada en fontanería y sistemas de agua con 12 años de experiencia.</p>
-				</div>
-				<div class="team-member">
-					<div class="member-avatar">MC</div>
-					<h3>Miguel López</h3>
-					<p class="role">Especialista Eléctrico</p>
-					<p>Electricista titulado con 20 años de experiencia en instalaciones residenciales.</p>
-				</div>
-				<div class="team-member">
-					<div class="member-avatar">TJ</div>
-					<h3>Tomás Fernández</h3>
-					<p class="role">Carpintero</p>
-					<p>Experto en trabajos de madera personalizados y proyectos de carpintería general.</p>
+			<h2>Conoce al Fundador</h2>
+			<div class="team-single">
+				<div class="team-member featured">
+					<div class="member-avatar">RR</div>
+					<h3>Reynaldo Rocha</h3>
+					<p class="role">Fundador y Técnico Electricista</p>
+					<p>25 años de experiencia en reparaciones y renovaciones residenciales.</p>
 				</div>
 			</div>
 		</div>
@@ -148,10 +130,9 @@ import Layout from '../layouts/Layout.astro';
 			margin-bottom: 3rem;
 		}
 
-		.team-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			gap: 2rem;
+		.team-single {
+			display: flex;
+			justify-content: center;
 		}
 
 		.team-member {
@@ -162,18 +143,23 @@ import Layout from '../layouts/Layout.astro';
 			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 		}
 
+		.team-member.featured {
+			padding: 3rem 4rem;
+			max-width: 400px;
+		}
+
 		.member-avatar {
-			width: 80px;
-			height: 80px;
+			width: 100px;
+			height: 100px;
 			background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 			color: white;
 			border-radius: 50%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			font-size: 1.5rem;
+			font-size: 2rem;
 			font-weight: 700;
-			margin: 0 auto 1rem;
+			margin: 0 auto 1.5rem;
 		}
 
 		.team-member h3 {
