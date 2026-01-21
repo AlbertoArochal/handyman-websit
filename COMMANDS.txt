@@ -1,0 +1,273 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║             HANDYMAN WEBSITE - ESSENTIAL COMMANDS REFERENCE                ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+NAVIGATE TO PROJECT:
+────────────────────────────────────────────────────────────────────────────
+cd handyman-website
+
+
+DEVELOPMENT COMMANDS:
+────────────────────────────────────────────────────────────────────────────
+
+Start Development Server:
+  npm run dev
+  → Opens at http://localhost:3000
+  → Auto-reloads on file changes
+  → Great for testing locally
+
+Build for Production:
+  npm run build
+  → Creates optimized dist/ folder
+  → Ready for deployment
+  → Minified and compressed
+
+Preview Production Build:
+  npm run preview
+  → Tests the production build locally
+  → Same as what will be deployed
+  → Good for final checks
+
+
+QUICK COMMANDS FOR DIFFERENT SCENARIOS:
+────────────────────────────────────────────────────────────────────────────
+
+First Time Setup:
+  cd handyman-website
+  npm install
+  npm run dev
+
+Development (Local Testing):
+  npm run dev
+  → Open http://localhost:3000
+
+Make Changes and Test:
+  1. Edit files in src/
+  2. Changes auto-reload
+  3. No need to restart
+
+Before Deploying:
+  npm run build
+  → Check for errors
+  → Review dist/ folder
+
+Deploy to Netlify:
+  1. npm run build
+  2. Commit and push to GitHub
+  3. Connect to Netlify
+  4. Netlify builds automatically
+
+Deploy to Vercel:
+  1. npm run build
+  2. Commit and push to GitHub
+  3. Connect to Vercel
+  4. Vercel builds automatically
+
+Deploy to Traditional Hosting:
+  1. npm run build
+  2. Upload dist/ folder via FTP
+  3. Point domain to folder
+
+
+PORT ALREADY IN USE:
+────────────────────────────────────────────────────────────────────────────
+npm run dev -- --port 3001
+→ Uses port 3001 instead of 3000
+→ Can use any available port number
+
+
+TROUBLESHOOTING COMMANDS:
+────────────────────────────────────────────────────────────────────────────
+
+Clear Cache and Rebuild:
+  rm -rf dist
+  npm run build
+
+Restart Development Server:
+  Ctrl+C (stop current server)
+  npm run dev
+
+Remove and Reinstall Dependencies:
+  rm -rf node_modules package-lock.json
+  npm install
+
+Check for Errors:
+  npm run build
+  → Shows any build errors
+
+
+CLEANING UP:
+────────────────────────────────────────────────────────────────────────────
+
+Remove Old Build:
+  rm -rf dist
+
+Remove Node Modules (to save space):
+  rm -rf node_modules
+
+Reinstall Everything:
+  rm -rf node_modules dist
+  npm install
+
+
+FILE EDITING SHORTCUTS:
+────────────────────────────────────────────────────────────────────────────
+
+Edit Business Name:
+  src/layouts/Layout.astro
+  Find: <a href="/">ProFix</a>
+  Change ProFix to your business name
+
+Edit Contact Info:
+  src/pages/contact.astro
+  Find: (555) 123-4567
+  Change to your phone number
+
+Edit Services:
+  src/pages/services.astro
+  Modify the services array
+
+Edit Colors:
+  src/layouts/Layout.astro
+  Look for :root { --primary-color: ...
+  Change color hex codes
+
+
+GIT COMMANDS (If Using GitHub):
+────────────────────────────────────────────────────────────────────────────
+
+Initialize Git:
+  git init
+
+Add All Files:
+  git add .
+
+Commit Changes:
+  git commit -m "Initial commit"
+
+Add Remote (replace with your URL):
+  git remote add origin https://github.com/username/repo.git
+
+Push to GitHub:
+  git push -u origin main
+
+
+USEFUL UTILITY COMMANDS:
+────────────────────────────────────────────────────────────────────────────
+
+Check Astro Version:
+  npm ls astro
+
+See All Astro Commands:
+  npm run astro -- --help
+
+List All Files:
+  find . -type f | grep -v node_modules | grep -v dist
+
+Check Project Size:
+  du -sh .
+
+Check Build Size:
+  du -sh dist/
+
+List Directory Contents:
+  ls -la
+  ls -la src/
+  ls -la src/pages/
+
+
+DEPLOYMENT COMMANDS BY PLATFORM:
+────────────────────────────────────────────────────────────────────────────
+
+Netlify CLI Install:
+  npm install -g netlify-cli
+
+Netlify Deploy:
+  netlify deploy --prod
+  → Must have npm run build done first
+
+Vercel CLI Install:
+  npm install -g vercel
+
+Vercel Deploy:
+  vercel --prod
+  → Must have npm run build done first
+
+
+QUICK WORKFLOW:
+────────────────────────────────────────────────────────────────────────────
+
+Daily Development:
+  npm run dev           # Start server
+  [edit files]          # Make changes
+  [browser auto-reload] # See changes
+  Ctrl+C               # Stop when done
+
+Before Pushing to GitHub:
+  npm run build        # Build for production
+  [check for errors]   # Verify no errors
+  git add .            # Stage changes
+  git commit -m "..."  # Commit
+  git push             # Push
+
+Deployment:
+  npm run build        # Build for production
+  [choose platform]    # Netlify/Vercel/FTP
+  [deploy files]       # Upload
+  [test live site]     # Verify
+
+
+COMMON MISTAKES TO AVOID:
+────────────────────────────────────────────────────────────────────────────
+
+❌ Editing files without npm run dev started
+✓ Always start dev server first
+
+❌ Forgetting npm run build before deploying
+✓ Always build for production first
+
+❌ Pushing node_modules to GitHub
+✓ Add to .gitignore (already done)
+
+❌ Using wrong port
+✓ Default is 3000, use npm run dev -- --port XXXX
+
+❌ Not testing on mobile
+✓ Always test responsive design
+
+
+FILE STRUCTURE REMINDER:
+────────────────────────────────────────────────────────────────────────────
+
+handyman-website/
+├── src/
+│   ├── pages/
+│   │   ├── index.astro          ← Home page
+│   │   ├── services.astro       ← Services
+│   │   ├── about.astro          ← About
+│   │   └── contact.astro        ← Contact
+│   └── layouts/
+│       └── Layout.astro         ← Main layout
+├── dist/                         ← Built files
+├── public/                       ← Static files
+├── package.json
+└── astro.config.mjs
+
+
+NEEDS HELP?
+────────────────────────────────────────────────────────────────────────────
+
+Check Documentation:
+  START_HERE.md
+  QUICK_START.md
+  PAGES_GUIDE.md
+  PROJECT_SUMMARY.md
+  README.md
+
+Astro Docs:
+  https://docs.astro.build
+
+Astro Discord:
+  https://astro.build/chat
+
+╚════════════════════════════════════════════════════════════════════════════╝

@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Us">
+	<section class="about-hero">
+		<div class="container">
+			<h1>About ProFix Handyman</h1>
+			<p>Your trusted partner for 10+ years of reliable home services</p>
+		</div>
+	</section>
+
+	<section class="about-content">
+		<div class="container">
+			<div class="about-grid">
+				<div class="about-text">
+					<h2>Who We Are</h2>
+					<p>ProFix Handyman has been serving the community for over a decade with professional, reliable, and affordable handyman services. We believe in treating every home as if it were our own.</p>
+					<p>Our team consists of experienced professionals trained in various trades, ensuring that we can handle almost any home repair or maintenance project you might need.</p>
+					<h2>Our Mission</h2>
+					<p>To provide exceptional handyman services that exceed our customers' expectations while maintaining the highest standards of professionalism and integrity.</p>
+				</div>
+				<div class="about-stats">
+					<div class="stat">
+						<div class="stat-number">10+</div>
+						<div class="stat-label">Years in Business</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">5000+</div>
+						<div class="stat-label">Happy Customers</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">98%</div>
+						<div class="stat-label">Satisfaction Rate</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">24/7</div>
+						<div class="stat-label">Emergency Support</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="team">
+		<div class="container">
+			<h2>Meet Our Team</h2>
+			<div class="team-grid">
+				<div class="team-member">
+					<div class="member-avatar">JD</div>
+					<h3>John Davis</h3>
+					<p class="role">Owner & Lead Technician</p>
+					<p>15 years of experience in residential repairs and renovations.</p>
+				</div>
+				<div class="team-member">
+					<div class="member-avatar">SM</div>
+					<h3>Sarah Martinez</h3>
+					<p class="role">Master Plumber</p>
+					<p>Specialized in plumbing and water systems with 12 years of expertise.</p>
+				</div>
+				<div class="team-member">
+					<div class="member-avatar">MC</div>
+					<h3>Mike Chen</h3>
+					<p class="role">Electrical Specialist</p>
+					<p>Licensed electrician with 10 years of experience in residential wiring.</p>
+				</div>
+				<div class="team-member">
+					<div class="member-avatar">TJ</div>
+					<h3>Tom Johnson</h3>
+					<p class="role">Carpenter</p>
+					<p>Expert in custom woodwork and general carpentry projects.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<style>
+		.about-hero {
+			background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+			color: white;
+			padding: 4rem 0;
+			text-align: center;
+		}
+
+		.about-hero h1 {
+			color: white;
+			font-size: 3rem;
+		}
+
+		.about-hero p {
+			color: rgba(255, 255, 255, 0.9);
+			font-size: 1.1rem;
+		}
+
+		.about-content {
+			background-color: white;
+			padding: 4rem 0;
+		}
+
+		.about-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
+			align-items: center;
+		}
+
+		.about-text h2 {
+			color: var(--primary-color);
+			margin-top: 1.5rem;
+		}
+
+		.about-text h2:first-child {
+			margin-top: 0;
+		}
+
+		.about-stats {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+		}
+
+		.stat {
+			background-color: var(--light-bg);
+			padding: 2rem;
+			border-radius: 0.75rem;
+			text-align: center;
+			border: 2px solid var(--border-color);
+		}
+
+		.stat-number {
+			font-size: 2.5rem;
+			font-weight: 700;
+			color: var(--secondary-color);
+		}
+
+		.stat-label {
+			color: var(--text-light);
+			margin-top: 0.5rem;
+		}
+
+		.team {
+			background-color: var(--light-bg);
+			padding: 4rem 0;
+		}
+
+		.team h2 {
+			text-align: center;
+			margin-bottom: 3rem;
+		}
+
+		.team-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 2rem;
+		}
+
+		.team-member {
+			background-color: white;
+			padding: 2rem;
+			border-radius: 0.75rem;
+			text-align: center;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+		}
+
+		.member-avatar {
+			width: 80px;
+			height: 80px;
+			background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+			color: white;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 0 auto 1rem;
+		}
+
+		.team-member h3 {
+			color: var(--primary-color);
+		}
+
+		.role {
+			color: var(--secondary-color);
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+		}
+
+		@media (max-width: 768px) {
+			.about-hero h1 {
+				font-size: 2rem;
+			}
+
+			.about-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.about-stats {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</Layout>

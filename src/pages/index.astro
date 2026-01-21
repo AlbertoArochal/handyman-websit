@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+	<section class="hero">
+		<div class="container hero-content">
+			<h1>Your Trusted Handyman Service</h1>
+			<p>Professional repairs and maintenance for your home</p>
+			<button class="btn-primary" onclick="window.location.href='/contact'">Get a Free Quote</button>
+		</div>
+	</section>
+
+	<section class="features">
+		<div class="container">
+			<h2>Why Choose ProFix?</h2>
+			<div class="features-grid">
+				<div class="feature-card">
+					<div class="feature-icon">🔧</div>
+					<h3>Expert Service</h3>
+					<p>Our experienced team handles all types of home repairs with precision and care.</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">⚡</div>
+					<h3>Fast & Reliable</h3>
+					<p>Quick turnaround times without compromising on quality of work.</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">💰</div>
+					<h3>Competitive Pricing</h3>
+					<p>Transparent, affordable rates with no hidden charges.</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">⭐</div>
+					<h3>100% Satisfaction</h3>
+					<p>We stand behind our work and guarantee your satisfaction.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cta">
+		<div class="container">
+			<h2>Ready to Fix It?</h2>
+			<p>Contact us today for a free consultation and estimate</p>
+			<button class="btn-secondary">Schedule Now</button>
+		</div>
+	</section>
+
+	<style>
+		.hero {
+			background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+			color: white;
+			padding: 6rem 0;
+			text-align: center;
+		}
+
+		.hero-content h1 {
+			font-size: 3.5rem;
+			margin-bottom: 1rem;
+			color: white;
+		}
+
+		.hero-content p {
+			font-size: 1.5rem;
+			margin-bottom: 2rem;
+			color: rgba(255, 255, 255, 0.9);
+		}
+
+		.hero-content button {
+			font-size: 1.1rem;
+			padding: 1rem 2rem;
+		}
+
+		.features {
+			background-color: white;
+		}
+
+		.features h2 {
+			text-align: center;
+			margin-bottom: 3rem;
+		}
+
+		.features-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 2rem;
+		}
+
+		.feature-card {
+			background-color: var(--light-bg);
+			padding: 2rem;
+			border-radius: 0.75rem;
+			text-align: center;
+			transition: all 0.3s ease;
+			border: 2px solid transparent;
+		}
+
+		.feature-card:hover {
+			border-color: var(--primary-color);
+			transform: translateY(-5px);
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+		}
+
+		.feature-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.feature-card h3 {
+			color: var(--primary-color);
+		}
+
+		.cta {
+			background-color: var(--dark-bg);
+			color: white;
+			text-align: center;
+			padding: 4rem 0;
+		}
+
+		.cta h2 {
+			color: white;
+		}
+
+		.cta p {
+			color: rgba(255, 255, 255, 0.8);
+			font-size: 1.1rem;
+			margin-bottom: 2rem;
+		}
+
+		@media (max-width: 768px) {
+			.hero-content h1 {
+				font-size: 2rem;
+			}
+
+			.hero-content p {
+				font-size: 1rem;
+			}
+		}
+	</style>
+</Layout>

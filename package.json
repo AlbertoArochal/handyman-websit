@@ -1,0 +1,19 @@
+{
+  "name": "handyman-website",
+  "version": "1.0.0",
+  "description": "Professional Handyman Service Website built with Astro",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": ["handyman", "astro", "website"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "astro": "^4.13.2"
+  }
+}
